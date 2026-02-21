@@ -1,0 +1,148 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #ffdde1, #ee9ca7);
+  color: #333;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Hero & Page Sections */
+.hero, .page {
+  padding: 100px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: linear-gradient(45deg, #6a11cb, #2575fc); /* purple-blue gradient */
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  margin: 15px;
+}
+
+.btn:hover {
+  background: linear-gradient(45deg, #2575fc, #6a11cb);
+  transform: scale(1.08);
+}
+
+/* Search Box */
+.search-box {
+  margin: 30px;
+}
+.search-box input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+.result-box {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #222;
+  padding: 10px;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Gallery & Images */
+.gallery img, .swiper-slide img {
+  width: 300px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Canvas (Petals, Confetti) */
+canvas {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+}
+
+/* Text Animations */
+.glow-text {
+  font-size: 40px;
+  color: #6a11cb;
+  text-shadow: 0 0 10px #2575fc, 0 0 20px #6a11cb;
+  animation: glow 2s infinite alternate;
+}
+.slide-up {
+  animation: slideUp 1.5s ease forwards;
+}
+
+/* Animations */
+@keyframes glow {
+  from { text-shadow: 0 0 10px #2575fc; }
+  to { text-shadow: 0 0 20px #6a11cb, 0 0 30px #2575fc; }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Apply Animations */
+.fade-in { animation: fadeIn 2s ease forwards; }
+.fade-in-delay { animation: fadeIn 3s ease forwards; }
+.bounce { animation: bounce 2s infinite; }
+.pulse { animation: pulse 2s infinite; }
+
+/* Page-Specific Styling */
+.apology-page h2 {
+  color: #ff4b5c;
+  animation: slideUp 2s ease forwards;
+}
+.memories-page h2 {
+  color: #2575fc;
+  animation: glow 3s infinite alternate;
+}
+.promise-page h2 {
+  color: #56ab2f;
+  animation: bounce 2s infinite;
+}
+.logs-page h1 {
+  color: #f7971e;
+  animation: pulse 2s infinite;
+}
+
+/* Logs Table */
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+table th {
+  background: #6a11cb;
+  color: #fff;
+}
+table tr:nth-child(even) {
+  background: #f9f9f9;
+}
