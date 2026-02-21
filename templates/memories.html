@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Memories</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+</head>
+<body>
+  <div class="page">
+    <h2>Our Memories</h2>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="{{ url_for('static', filename='images/photo1.jpg') }}"><p>Lucky to have you</p></div>
+        <div class="swiper-slide"><img src="{{ url_for('static', filename='images/photo2.jpg') }}"><p>Your smile is my sunshine</p></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <a href="/promise" class="btn" onclick="logClick('Next Chapter')">Next Chapter</a>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper', {
+      loop:true,
+      autoplay:{delay:3000},
+      pagination:{el:'.swiper-pagination'},
+    });
+  </script>
+</body>
+</html>

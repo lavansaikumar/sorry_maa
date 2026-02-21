@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For My Shireesha ❤️</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+  <!-- Hero Section -->
+  <div class="hero fade-in">
+    <h1 class="glow-text">My Dearest Shireesha</h1>
+    <p class="slide-up">I’m sorry, maa. nijanga naaku ela matladalo theliyadhu please maa matladu . This journey is for you.</p>
+    <a href="/apology" class="btn bounce" onclick="logClick('Begin Journey')">Begin Our Journey</a>
+  </div>
+
+  <!-- Search Section -->
+  <div class="search-box fade-in-delay">
+    <input type="text" id="searchInput" placeholder="Enter your secret code">
+    <button class="btn pulse" onclick="performSearch()">Search</button>
+  </div>
+  <div id="searchResult" class="result-box"></div>
+</body>
+</html>
